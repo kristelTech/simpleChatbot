@@ -19,10 +19,10 @@ model_name = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 tokenizer = AutoTokenizer.from_pretrained(
     model_name,
     trust_remote_code=True,
-    local_files_only=True  # set True after first run if cached
+    local_files_only=False  # set True after first run if cached
 )
 
-model = AutoModelForCausalLM.from_pretrained("./local_model", trust_remote_code=True, local_files_only=True)
+model = AutoModelForCausalLM.from_pretrained("../local_model", trust_remote_code=True, local_files_only=True)
 model.to(device)
 model = torch.compile(model)
 
