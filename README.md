@@ -36,6 +36,7 @@ pip install -r requirements.txt
 
 4. Run the program
 ```bash
+cd deepseek_chatbot
 python chatbot.py
 ```
 
